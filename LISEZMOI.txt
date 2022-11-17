@@ -1,0 +1,10 @@
+Les scripts de chaque question se trouvent dans les répertoires correspondant aux questions.
+
+Les maillages utilisés sont dans le répertoire "maillages". Ils sont compressés pour satisfaire aux contraintes de taille maximale de fichier de github. Pour les décompresser (sous linux), aller dans le répertoir maillages et taper:
+gunzip *.gz
+
+La solution de référence est stockée dans le répertoire ref.mat, qui a été découpé en plusieurs morceaux pour satisfaire aux contraintes de taille maximale de fichier de github. Pour reconstituer ce fichier (sous linux), taper:
+cat ref.mat.* > ref.mat
+
+Il faut déplacer ou copier ce fichier dans chacun des sous-répertoires des question nécessitant cette solution, à savoir question_2_8, question_2_10 et question_2_11
+
