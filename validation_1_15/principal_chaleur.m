@@ -15,7 +15,7 @@
 % =====================================================
 
 clear all;close all;
-list_suffixes = ["2" "1" "05" "02" "01" "005"]
+list_suffixes = ["2";"1";"05";"02";"01";"005"];
 iSmax=size(list_suffixes,2)
 erreurL2List = zeros(iSmax, 1);
 erreurH1List = zeros(iSmax, 1);

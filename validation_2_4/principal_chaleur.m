@@ -136,6 +136,10 @@ for iS=1:iSmax
     Sigma_ref = zeros(Nbpt, 2);
     Sigma_ref(:,1) = -pi*cos(pi*X).*sin(2*pi*Y); %% A COMPLETER
     Sigma_ref(:,2) = -2*pi*sin(pi*X).*cos(2*pi*Y); %% A COMPLETER
+    clf
+    affiche(sqrt(Sigma_ref(:,1).^2+Sigma_ref(:,2).^2), Numtri, Coorneu, sprintf('Norme Sigma_ref - %s', nom_maillage));
+    print(gcf,strcat('Norme_Sigma_ref_2_4_', num2str(iS)), '-dpdf')
+    print(gcf,strcat('Norme_Sigma_ref_2_4_', num2str(iS)), '-dpng')
 
     %% Erreur sur u
     EE = (UU-UU_ref);
@@ -173,8 +177,8 @@ grid on
 legend('Norme L2',strcat('Norme L2 lin m=',num2str(pL2(1))))
 xlabel("log10(1/h)")
 ylabel("log10(erreur)")
-print(gcf,'convergence_2_4', '-dpdf')
-print(gcf,'convergence_2_4', '-dpng')
+print(gcf,'convergence_sigma_2_4', '-dpdf')
+print(gcf,'convergence_sigma_2_4', '-dpng')
 format long e
 clf
 figure
